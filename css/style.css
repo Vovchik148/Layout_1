@@ -1,0 +1,78 @@
+body .header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header .container{
+    display: flex;
+}
+
+.header .container img {
+    height: 70px;
+    width: 70px;
+}
+
+.header .container .text {
+    display: block;
+    margin-left: 0.5em;
+    line-height: 1.5rem;
+}
+
+.header .container .text .company_name {
+    display: block;
+    width: 9rem;
+    height: auto;
+    font-size: 30px;
+    
+}
+
+.header .container .text .under_name {
+    font-size: x-small;
+}
+
+.feedback {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 35em;
+}
+
+.feedback .number {
+    font-size: 30px;
+}
+
+.feedback .send_feedback {
+    align-self: flex-end;
+    background-color: white;
+    border: 0;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.feedback .send_feedback:hover {
+    cursor: pointer;
+  }
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: #6D351A;    
+}
+
+.menu ul, li {
+    list-style-type: none;
+    float: left;
+
+}
+
+.menu button {
+    background-color: #6D351A;
+    color: white;
+    border: 0;
+}
