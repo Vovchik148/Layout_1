@@ -242,7 +242,7 @@
         // Отримуємо елементи
         const modal = document.getElementById("feedbackModal");
         const btn = document.getElementById("feedbackButton");
-        const span = document.getElementsByClassName("close")[0];
+        const close = document.getElementsByClassName("close")[0];
         const form = document.getElementById("feedbackForm");
 
         // Відкриваємо модальне вікно при кліку на кнопку
@@ -251,7 +251,7 @@
         }
 
         // Закриваємо модальне вікно при кліку на "х"
-        span.onclick = function () {
+        close.onclick = function () {
             modal.style.display = "none";
         }
 
