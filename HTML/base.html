@@ -64,27 +64,6 @@
             </div>
         </div>
     </nav>
-    <div id="feedbackModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Зворотній зв'язок</h2>
-            <form id="feedbackForm">
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" name="name" autocomplete="off" required>
-
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" autocomplete="off" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" autocomplete="off"autocomplete="off" required>
-
-                <label for="message">Повідомлення:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Надіслати</button>
-            </form>
-        </div>
-    </div>
 </header>
 
 <main>
@@ -238,6 +217,27 @@
             <span><span class="u">Розробка сайту</span> - компанія "Піксель Плюс"</span>
         </div>
     </footer>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Зворотній зв'язок</h2>
+            <form id="feedbackForm">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" autocomplete="off" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="off" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" autocomplete="off"autocomplete="off" required>
+
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
+    </div>
     <script>
         // Отримуємо елементи
         const modal = document.getElementById("feedbackModal");

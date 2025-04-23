@@ -1,3 +1,7 @@
+        /* Початок оформлення сторінки */
+
+    /* Початок роботи з хедером */
+/* Позиціонування логотипу компанії, назви, телефон підтримки та кнопки "Зворотній зв'язок" */
 header .container {
     display: flex;
     justify-content: space-evenly;
@@ -5,6 +9,7 @@ header .container {
     flex-wrap: wrap;
 }
 
+/* Робота над контейнером з логотипом та ім'ям компанії */
 header .text-container {
     display: flex;
     align-self: center;
@@ -31,7 +36,9 @@ header .text-container .text .company_name {
 header .text-container .text .under_name {
     font-size: x-small;
 }
+/* Кінець роботи над контейнером з логотипом та ім'ям компанії */
 
+/* Початок роботи над контейнером з телефоном підтримки та кнопкою зворотнього зв'язку */
 .feedback-container {
     display: flex;
     justify-content: center;
@@ -58,7 +65,72 @@ header .text-container .text .under_name {
 .feedback-container .send_feedback:hover {
     cursor: pointer;
 }
+/* Кінець  над контейнером з телефоном підтримки та кнопкою зворотнього зв'язку */
 
+/* Оформлення модального вікна */
+.modal {
+    display: none; /* Приховано за замовчуванням */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    margin: 15% auto;
+    padding: 20px;
+    max-width: 500px;
+    justify-content: center;
+}
+
+.modal-content h2 {
+    align-self: center;
+}
+
+.close {
+    align-self: flex-end;
+    color: #aaa;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    align-self: center;
+    margin-top: 10px;
+}
+
+input, textarea {
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #C0C0C0;
+    border: none;
+}
+
+button[type="submit"]:hover {
+    background-color: #7F7F7F;
+}
+/* Кінець роботи над модальним вікном */
+
+/* Оформлення меню */
 nav {
     margin-top: 2em;
 }
@@ -81,7 +153,13 @@ nav .nav-link {
     font-size: 20px;
     color: white;
 }
+/* Кінець роботи над оформленням меню */
 
+    /* Кінець оформлення хедера */
+
+    /* Початок оформлення головної частини сторінки */
+
+/* Стилі і медіа запити для слайдера */
 .slider .slider_item {
     display: flex;
     justify-content: center;
@@ -136,6 +214,7 @@ nav .nav-link {
 
 }
 
+/* Оформлення стрілок перемикання між "слайдами" та їх медіа запити */
 .slider .slick-arrow {
     position: absolute;
     margin: -30px 0 0 0;
@@ -214,7 +293,11 @@ nav .nav-link {
         right: 0.2rem;
     }
 }
+/* Кінець роботи над стрілками переходу між "слайдами" */
 
+/* Кінець оформлення слайдеру */
+
+/* Початок роботи над нинішнім шляхом на сторінці */
 .content .way {
     margin-top: 2rem;
     margin-left: 6rem;
@@ -235,7 +318,9 @@ nav .nav-link {
 .content .way .extra-way {
     font-size: 0;
 }
+/* Кінець роботи над нинішнім шляхом на сторінці */
 
+/* Початок роботи над основним контентом сторінки */
 .content .list-items {
     display: flex;
     margin: 1rem 5rem 0;
@@ -252,6 +337,7 @@ nav .nav-link {
     }
 }
 
+/* Стилі для загального списку товарів */
 .content .list-items .list-group-item {
     font-size: 18px;
 }
@@ -261,7 +347,9 @@ nav .nav-link {
     font-weight: bold;
     font-size: 20px;
 }
+/* Кінець роботи над загальним списком товарів */
 
+/* Робота над іконкою прайс-листа і його медіа запити */
 .content .list-items .list-group-item .price-list {
     padding: 5rem 0 0 10rem;
 }
@@ -275,7 +363,9 @@ nav .nav-link {
 .content .list-items .list-group-item .price-list a {
     width: 100%;
 }
+/*Завершення роботи над іконкою прайс-листа і його медіа запити */
 
+/* Оформлення основного переліку товарів на сторінці і їх медіа запити */
 .container-main {
     padding-left: 5rem;
     margin-bottom: 15rem;
@@ -292,33 +382,37 @@ nav .nav-link {
     background-color: Silver;
 }
 
-.content .list-items .row .col .card .card-img-top {
+.content .list-items .card-img-top {
     width: 50%;
 }
 
-.content .list-items .row .col .card .card-body .card-text {
+.content .list-items .card-text {
     font-size: 20px;
 }
 
-.content .list-items .row .col .card .card-body .price {
+.content .list-items .price {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.content .list-items .row .col .card .card-body .price span {
+.content .list-items .price span {
     font-weight: bold;
     font-size: 20px;
 }
 
-.content .list-items .row .col .card .card-body .price .cart {
+.content .list-items .price .cart {
     background: url(/img/icon_buy.svg) no-repeat;
     width: 10%;
     height: 1.6em;
     border: 0;
     padding: 0;
 }
+/* Завершення оформлення основного переліку товарів */
 
+/* Кінець роботи над основним контентом сторінки */
+
+/* Панель навігації (цифри, які позначають нинішню сторінку) */
 nav .pagination {
     align-items: center;
 }
@@ -333,7 +427,16 @@ nav .pagination {
     font-size: 26px;
     font-weight: bold;
 }
+/* Кінець оформленян панелі навігації */
 
+/* Лінія-розділювач */
+.line-above {
+    height: 1px;
+    width: 95%;
+}
+/* Кінець стилю лінії-розділювача */
+
+/* Оформлення тексту опису компанії */
 .description {
     display: flex;
     align-items: start;
@@ -342,12 +445,11 @@ nav .pagination {
 .description .text {
     width: 50%;
 }
+/* Завершення оформлення тексту опису компанії */
 
-.line-above {
-    height: 1px;
-    width: 95%;
-}
+    /* Кінець оформлення головної частини сторінки */
 
+    /* Оформлення футеру */
 footer {
     display: flex;
     align-items: start;
@@ -374,75 +476,6 @@ footer ul {
     list-style: none;
     text-decoration: underline;
 }
+    /* Кінець оформлення футеру */
 
-/* Стилі для модального вікна */
-.modal {
-    display: none; /* Приховано за замовчуванням */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
-    justify-content: center;
-}
-
-.modal-content form label {
-    align-self: center;
-}
-
-.modal-content h2 {
-    align-self: center;
-}
-
-.close {
-    align-self: flex-end;
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: black;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input,
-textarea {
-    padding: 8px;
-    margin-top: 5px;
-}
-
-button[type="submit"] {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #C0C0C0;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-button[type="submit"]:hover {
-    background-color: #7F7F7F;
-}
+        /* Кінець оформлення сторінки */
