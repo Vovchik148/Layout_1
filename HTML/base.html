@@ -3,15 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Layout 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/script.js"></script>
 </head>
 
-<body>
-    <div class="header">
-        <div class="container">
+<header>
+    <div class="container">
+        <div class="text-container">
             <img src="../img/logo.png" alt=" ">
-            <div class = "text">
+            <div class="text">
                 <span class="company_name">
                     Назва компанії
                 </span>
@@ -20,20 +30,249 @@
                 </span>
             </div>
         </div>
-        <div class="feedback">
+        <div class="feedback-container">
             <span class="number">+38(095)4444444</span>
-            <button class="send_feedback">Зворотній зв'язок</button>
+            <button class="send_feedback" id="feedbackButton">Зворотній зв'язок</button>
         </div>
     </div>
-    <div class = "menu">
-        <ul>
-            <li><button>Головна</button></li>
-            <li><button>Каталог</button></li>
-            <li><button>Доставка і оплата</button></li>
-            <li><button>Прайс-лист</button></li>
-            <li><button>Контакти</button></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                Меню
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Доставка і оплата</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Прайс-лист</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Зворотній зв'язок</h2>
+            <form id="feedbackForm">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" autocomplete="off" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" autocomplete="off" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" autocomplete="off"autocomplete="off" required>
+
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Надіслати</button>
+            </form>
+        </div>
     </div>
-</body>
+</header>
+
+<main>
+    <div class="slider">
+        <div class="slider_item">
+            <img src="/img/slide1.jpg" loading="lazy" alt="">
+        </div>
+        <div class="slider_item">
+            <img src="/img/slide2.jpg" loading="lazy" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <div class="way">
+            <span class="main-way">Головна / Каталог / Побутова техніка</span>
+        </div>
+        <div class="list-items">
+            <ul class="list">
+                <li class="list-group-item">Автомобілі</li>
+                <li class="list-group-item"><span class="active">Побутова техніка</span>
+                    <ul>
+                        <li><span  class="active">Мікрохвильові печі</span></li>
+                        <li>Холодильники</li>
+                        <li>Посудомийні машини</li>
+                        <li>Чайники</li>
+                    </ul>
+                </li>
+                <li class="list-group-item">Мобільна техніка</li>
+                <li class="list-group-item">Комп'ютери</li>
+                <li class="list-group-item">Одяг</li>
+                <li class="list-group-item">Нерухомість</li>
+                <li class="list-group-item">
+                    <div class="price-list">
+                        <a href="/Прайс-лист.xlsx" download><img src="/img/logo_price-list.jpg" class="logo-price-list"
+                                alt=""></a>
+                        <span class="text-price-list">Прайс-лист</span>
+                    </div>
+
+                </li>
+            </ul>
+            <div class="container-main">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Найкращий чайник для вас!</p>
+                                <div class="price">
+                                    <span>1400 грн.</span>
+                                    <button class="cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Найкращий чайник для вас!</p>
+                                <div class="price">
+                                    <span>1400 грн.</span>
+                                    <button class="cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Найкращий чайник для вас!</p>
+                                <div class="price">
+                                    <span>1400 грн.</span>
+                                    <button class="cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Найкращий чайник для вас!</p>
+                                <div class="price">
+                                    <span>1400 грн.</span>
+                                    <button class="cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Найкращий чайник для вас!</p>
+                                <div class="price">
+                                    <span>1400 грн.</span>
+                                    <button class="cart"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                    </ul>
+                </nav>
+                <hr class="line-above">
+                <div class="description">
+                    <div class="text">
+                        Компанія "Піксель Плюс" існує більше 6 років, за цей час ми взяли участь в розробці більш ніж
+                        700
+                        сайтів, тому можемо впевненно називати себе професіоналами.
+                        На даний момент наш колектив складається з більш ніж 30 співробітників.
+                    </div>
+                    <div class="text">
+                        Одним з основних напрямків роботи нашої компанії є пошукове просунення сайтів, на цей момент ми
+                        працюємо з більш ніж 150 постійними клієнтами по більш ніж 11000 пошуковим запитам.
+                        При цьому в роботі основний акцент робимо на якість роботи, а також застосовуємо власні
+                        унікальні
+                        розробки в області SEO просувань.
+                        На сьогодні, відділ SEO складається з 9 людей під керівництвом провідного спеціаліста.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="info">
+            ⓒ 2012-2013 ЗАО "Кумпанія"
+            info@name.hohlos
+        </div>
+        <div class="info">
+            <ul>
+                <li>Головна</li>
+                <li>Каталог</li>
+                <li>Доставка і оплата</li>
+                <li>Прайс-лист</li>
+                <li>Контакти</li>
+            </ul>
+        </div>
+        <div class="info">
+            <img src="/img/logo_companydev.svg" loading="lazy" alt="">
+            <span><span class="u">Розробка сайту</span> - компанія "Піксель Плюс"</span>
+        </div>
+    </footer>
+    <script>
+        // Отримуємо елементи
+        const modal = document.getElementById("feedbackModal");
+        const btn = document.getElementById("feedbackButton");
+        const span = document.getElementsByClassName("close")[0];
+        const form = document.getElementById("feedbackForm");
+
+        // Відкриваємо модальне вікно при кліку на кнопку
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Закриваємо модальне вікно при кліку на "х"
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Закриваємо модальне вікно при кліку поза ним
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Обробка відправки форми
+        form.onsubmit = function (event) {
+            event.preventDefault();
+
+            // Тут можна додати код для відправки даних на сервер
+            alert("Дякуємо за ваш відгук!");
+            modal.style.display = "none";
+            form.reset();
+        }
+    </script>
+</main>
+
 
 </html>
