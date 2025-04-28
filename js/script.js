@@ -8,3 +8,12 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
     });
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdownHeader = document.querySelector('.dropdown-header');
+    
+    dropdownHeader.addEventListener('click', function() {
+        const dropdown = this.parentElement;
+        dropdown.classList.toggle('active');
+    });
+});

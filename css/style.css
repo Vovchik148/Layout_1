@@ -48,6 +48,8 @@ header .text-container .text .under_name {
 
 .feedback-container .number {
     font-size: 24px;
+    background-color: transparent;
+    border: 0;
 }
 
 .feedback-container .send_feedback {
@@ -338,29 +340,69 @@ nav .nav-link {
 }
 
 /* Стилі для загального списку товарів */
-.content .list-items .list-group-item {
+.content .list-items li {
+    list-style: none;
     font-size: 18px;
 }
 
-.content .list-items li .active {
+.content .list-items li li {
+    font-size: 15px;
+}
+
+.list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content {
+    list-style-type: none;
+    padding-left: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.dropdown-content li {
+    padding: 0.5px 0;
+}
+
+.dropdown.active .dropdown-content {
+    max-height: 500px;
+    
+}
+
+.content .list-items li .active1 {
+    width: 13rem;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.content .list-items li .active2 {
     text-decoration: underline;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
 }
 /* Кінець роботи над загальним списком товарів */
 
 /* Робота над іконкою прайс-листа і його медіа запити */
-.content .list-items .list-group-item .price-list {
+.list .list-group-item .price-list {
+    text-align: center;
     padding: 5rem 0 0 10rem;
 }
 
 @media (max-width: 768px) {
-    .content .list-items .list-group-item .price-list {
+    .list .list-group-item .price-list {
         padding-left: 1rem;
     }
 }
 
-.content .list-items .list-group-item .price-list a {
+.list .list-group-item .price-list a {
     width: 100%;
 }
 /*Завершення роботи над іконкою прайс-листа і його медіа запити */
@@ -402,7 +444,7 @@ nav .nav-link {
 }
 
 .content .list-items .price .cart {
-    background: url(/img/icon_buy.svg) no-repeat;
+    background: url(../img/icon_buy.svg) no-repeat;
     width: 10%;
     height: 1.6em;
     border: 0;
@@ -462,6 +504,17 @@ footer {
 footer .info {
     display: flex;
     width: 250px;
+}
+
+footer .comp-info {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .comp-info button {
+    background-color: transparent;
+    border: 0;
+    color: white;
 }
 
 footer .info img {

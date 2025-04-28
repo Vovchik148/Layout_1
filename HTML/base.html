@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="feedback-container">
-            <span class="number">+38(095)4444444</span>
+            <button id="phoneButton" class="number">+38(095)4444444</button>
             <button class="send_feedback" id="feedbackButton">Зворотній зв'язок</button>
         </div>
     </div>
@@ -69,10 +69,10 @@
 <main>
     <div class="slider">
         <div class="slider_item">
-            <img src="/img/slide1.jpg" alt="">
+            <img src="../img/slide1.jpg" alt="">
         </div>
         <div class="slider_item">
-            <img src="/img/slide2.jpg" alt="">
+            <img src="../img/slide2.jpg" alt="">
         </div>
     </div>
     <div class="content">
@@ -82,12 +82,15 @@
         <div class="list-items">
             <ul class="list">
                 <li class="list-group-item">Автомобілі</li>
-                <li class="list-group-item"><span class="active">Побутова техніка</span>
-                    <ul>
-                        <li><span  class="active">Мікрохвильові печі</span></li>
-                        <li>Холодильники</li>
-                        <li>Посудомийні машини</li>
-                        <li>Чайники</li>
+                <li class="dropdown">
+                    <div class="dropdown-header active1">
+                        Побутова техніка
+                    </div>
+                    <ul class="dropdown-content">
+                        <li><label class="active2">Мікрохвильові печі</label></li>
+                        <li><label>Холодильники</label></li>
+                        <li><label>Посудомийні машини</label></li>
+                        <li><label>Чайники</label></li>
                     </ul>
                 </li>
                 <li class="list-group-item">Мобільна техніка</li>
@@ -96,9 +99,9 @@
                 <li class="list-group-item">Нерухомість</li>
                 <li class="list-group-item">
                     <div class="price-list">
-                        <a href="/Прайс-лист.xlsx" download><img src="/img/logo_price-list.jpg" class="logo-price-list"
-                                alt=""></a>
-                        <span class="text-price-list">Прайс-лист</span>
+                        <a href="../Прайс-лист.xlsx" download><img src="../img/logo_price-list.jpg"
+                                class="logo-price-list" alt=""></a>
+                        <span class="text-price-list">&#8593<br>Прайс-лист</span>
                     </div>
 
                 </li>
@@ -107,7 +110,7 @@
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     <div class="col">
                         <div class="card">
-                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <img src="../img/nophoto.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Найкращий чайник для вас!</p>
                                 <div class="price">
@@ -119,7 +122,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <img src="../img/nophoto.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Найкращий чайник для вас!</p>
                                 <div class="price">
@@ -131,7 +134,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <img src="../img/nophoto.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Найкращий чайник для вас!</p>
                                 <div class="price">
@@ -143,7 +146,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <img src="../img/nophoto.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Найкращий чайник для вас!</p>
                                 <div class="price">
@@ -155,7 +158,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="/img/nophoto.jpg" class="card-img-top" alt="...">
+                            <img src="../img/nophoto.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <p class="card-text">Найкращий чайник для вас!</p>
                                 <div class="price">
@@ -199,9 +202,9 @@
         </div>
     </div>
     <footer>
-        <div class="info">
+        <div class="comp-info">
             ⓒ 2012-2013 ЗАО "Кумпанія"
-            info@name.hohlos
+            <button id="emailButton">akunamatata4416@gmail.com</a></button>
         </div>
         <div class="info">
             <ul>
@@ -213,7 +216,7 @@
             </ul>
         </div>
         <div class="info">
-            <img src="/img/logo_companydev.svg" loading="lazy" alt="">
+            <img src="../img/logo_companydev.svg" loading="lazy" alt="">
             <span><span class="u">Розробка сайту</span> - компанія "Піксель Плюс"</span>
         </div>
     </footer>
@@ -226,10 +229,10 @@
                 <input type="text" id="name" name="name" autocomplete="off" required>
 
                 <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" autocomplete="off" required>
+                <input type="tel" id="phone" name="phone" autocomplete="off" required pattern="\+\d{12}">
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" autocomplete="off"autocomplete="off" required>
+                <input type="email" id="email" name="email" autocomplete="off" autocomplete="off" required>
 
                 <label for="message">Повідомлення:</label>
                 <textarea id="message" name="message" required></textarea>
@@ -271,6 +274,19 @@
             modal.style.display = "none";
             form.reset();
         }
+    </script>
+    <script>
+        document.getElementById('emailButton').addEventListener('click', function () {
+            const email = this.textContent.trim(); // trim() для видалення зайвих пробілів
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+            window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        });
+    </script>
+    <script>
+        document.getElementById('phoneButton').addEventListener('click', function () {
+            const phoneNumber = this.textContent.trim().replace(/[^\d+]/g, ''); // Видаляємо всі нецифрові символи, крім +
+            window.open(`tel:${phoneNumber}`, '_blank'); // На телефонах відкриє дзвінок
+        });
     </script>
 </main>
 
